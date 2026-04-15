@@ -2,8 +2,14 @@ package edu.norcocollege.cis18b.week6.mini01;
 
 import java.util.List;
 
+/*
+ * Demonstrates generic methods and generic classes.
+*/
 public class GenericBoxDemo {
 
+    /*
+     * Returns the first element of a list
+    */
     public static <T> T first(List<T> values) {
         if (values == null || values.isEmpty()) {
             throw new IllegalArgumentException("values must contain at least one item");
@@ -11,16 +17,34 @@ public class GenericBoxDemo {
         return values.get(0);
     }
 
+    /*
+     * Follows the extension method by
+     * returning the last element of a list
+    */
+    public static <T> T last(List<T> values) {
+        if (values == null || values.isEmpty()) {
+            throw new IllegalArgumentException("values must contain at least one item");
+        }
+        return values.get(values.size() - 1);
+    }
+
     public static void main(String[] args) {
+
+        // Create a Box for Strings
         Box<String> labelBox = new Box<>();
         labelBox.set("CIS-18B");
 
+        // Create a Box for Integers
         Box<Integer> unitsBox = new Box<>();
         unitsBox.set(4);
 
+        // Use generic method with Strings
         String firstStudent = first(List.of("Ada", "Grace", "Margaret"));
+
+        // Use generic method with Integers
         Integer firstScore = first(List.of(98, 91, 87));
 
+        // Print results (matches expected output)
         System.out.println("Label: " + labelBox.get());
         System.out.println("Units: " + unitsBox.get());
         System.out.println("First student: " + firstStudent);
