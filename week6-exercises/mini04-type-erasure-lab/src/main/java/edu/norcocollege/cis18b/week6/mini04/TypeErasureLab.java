@@ -3,12 +3,16 @@ package edu.norcocollege.cis18b.week6.mini04;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Demonstrates the runtime effects of type erasure
+*/
 public class TypeErasureLab {
 
     public static void main(String[] args) {
         List<String> courseNames = new ArrayList<>();
         List<Integer> sectionCounts = new ArrayList<>();
 
+        // Due to the type erasure both lists have the same runtime class
         boolean sameRuntimeClass = courseNames.getClass() == sectionCounts.getClass();
         boolean listInstanceCheck = courseNames instanceof List;
 
