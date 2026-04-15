@@ -1,5 +1,8 @@
 package edu.norcocollege.cis18b.week6.mini06;
 
+/*
+ * Demonstrates a strongly typed generic Observer pattern using SecurityAlert.
+*/
 public class GenericObserverDemo {
 
     public static void main(String[] args) {
