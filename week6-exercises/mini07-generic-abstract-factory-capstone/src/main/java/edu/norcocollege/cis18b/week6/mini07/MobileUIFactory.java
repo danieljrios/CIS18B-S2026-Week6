@@ -1,5 +1,8 @@
 package edu.norcocollege.cis18b.week6.mini07;
 
+/*
+ * Concrete factory for the Mobile UI family
+*/
 public class MobileUIFactory implements UIFactory<MobileButton, MobileDialog> {
 
     @Override

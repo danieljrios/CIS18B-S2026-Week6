@@ -1,5 +1,8 @@
 package edu.norcocollege.cis18b.week6.mini07;
 
+/*
+ * Demonstrates a generic Abstract Factory with two compatible UI families
+ */
 public class GenericAbstractFactoryDemo {
 
     public static void main(String[] args) {
