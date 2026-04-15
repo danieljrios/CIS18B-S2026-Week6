@@ -3,6 +3,9 @@ package edu.norcocollege.cis18b.week6.mini03;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Demonstrates wildcard bounds using producer and consumer methods
+*/
 public class WildcardsPecsClinic {
 
     public static void main(String[] args) {
@@ -16,7 +19,6 @@ public class WildcardsPecsClinic {
         List<Number> copiedValues = new ArrayList<>();
         WildcardUtils.copyAll(copySource, copiedValues);
 
-        // Invariance reminder: List<Integer> is not a subtype of List<Number>.
         System.out.printf("Total score: %.1f%n", total);
         System.out.println("After practice adds: " + practice);
         System.out.println("Copied values: " + copiedValues);
